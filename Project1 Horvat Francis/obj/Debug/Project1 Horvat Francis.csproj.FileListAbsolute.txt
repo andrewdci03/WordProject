@@ -6,3 +6,12 @@ C:\Users\Andrew\Desktop\USF School Work\COP 4365 Software Systems Developement\P
 C:\Users\Andrew\Desktop\USF School Work\COP 4365 Software Systems Developement\Project1 Horvat Francis\Project1 Horvat Francis\obj\Debug\Project1 Horvat Francis.csproj.GenerateResource.Cache
 C:\Users\Andrew\Desktop\USF School Work\COP 4365 Software Systems Developement\Project1 Horvat Francis\Project1 Horvat Francis\obj\Debug\Project1 Horvat Francis.exe
 C:\Users\Andrew\Desktop\USF School Work\COP 4365 Software Systems Developement\Project1 Horvat Francis\Project1 Horvat Francis\obj\Debug\Project1 Horvat Francis.pdb
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\bin\Debug\Project1 Horvat Francis.exe.config
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\obj\Debug\Project1 Horvat Francis.exe
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\obj\Debug\Project1 Horvat Francis.pdb
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\obj\Debug\Project1 Horvat Francis.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\obj\Debug\Project1_Horvat_Francis.Form1.resources
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\obj\Debug\Project1_Horvat_Francis.Properties.Resources.resources
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\obj\Debug\Project1 Horvat Francis.csproj.GenerateResource.Cache
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\bin\Debug\Project1 Horvat Francis.exe
+C:\Users\Andrew\Documents\GitHub\WordProject\Project1 Horvat Francis\bin\Debug\Project1 Horvat Francis.pdb
