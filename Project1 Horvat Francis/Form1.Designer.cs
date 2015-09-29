@@ -1,7 +1,10 @@
-﻿namespace Project1_Horvat_Francis
+﻿using System.Collections.Generic;
+
+namespace Project1_Horvat_Francis
 {
     partial class Form1
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -156,6 +159,7 @@
             this.gameWordList.Name = "gameWordList";
             this.gameWordList.Size = new System.Drawing.Size(444, 324);
             this.gameWordList.TabIndex = 25;
+
             // 
             // endButton
             // 
@@ -190,8 +194,9 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+           
 
         #endregion
 
