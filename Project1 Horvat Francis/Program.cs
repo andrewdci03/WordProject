@@ -16,7 +16,11 @@ namespace Project1_Horvat_Francis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            FileReader myFileReader = new FileReader();
+
+            myFileReader.readFile();
+
+            Application.Run(new Form1(myFileReader.getList()));
         }
     }
 }

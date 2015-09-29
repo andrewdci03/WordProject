@@ -12,6 +12,9 @@ namespace Project1_Horvat_Francis
 {
     public partial class Form1 : Form
     {
+
+        private List<string> wordList;
+
         static Random _random = new Random();
 
         public Form1()
@@ -19,10 +22,18 @@ namespace Project1_Horvat_Francis
             InitializeComponent();
         }
 
+        public Form1(List<string> List)
+        {
+            wordList = new List<string>();
+            this.wordList = List;
+            InitializeComponent();
+        }
+
         private void startButton_Click(object sender, EventArgs e)
         {
             getLetters();
             timer1.Enabled = true;
+            this.gameWordList.DataSource = wordList;
         }
 
         private void endButton_Click(object sender, EventArgs e)
