@@ -51,56 +51,65 @@ namespace Project1_Horvat_Francis
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(229, 54);
+            this.checkBox5.Location = new System.Drawing.Point(153, 35);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(15, 14);
             this.checkBox5.TabIndex = 23;
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(179, 54);
+            this.checkBox4.Location = new System.Drawing.Point(119, 35);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(15, 14);
             this.checkBox4.TabIndex = 22;
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(128, 54);
+            this.checkBox3.Location = new System.Drawing.Point(85, 35);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(15, 14);
             this.checkBox3.TabIndex = 21;
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(77, 54);
+            this.checkBox2.Location = new System.Drawing.Point(51, 35);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
             this.checkBox2.TabIndex = 20;
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.SystemColors.Control;
             this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.checkBox1.Location = new System.Drawing.Point(26, 54);
+            this.checkBox1.Location = new System.Drawing.Point(17, 35);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 19;
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(289, 11);
-            this.startButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.startButton.Location = new System.Drawing.Point(193, 7);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(58, 46);
+            this.startButton.Size = new System.Drawing.Size(39, 30);
             this.startButton.TabIndex = 18;
             this.startButton.Text = "GO!";
             this.startButton.UseVisualStyleBackColor = true;
@@ -108,42 +117,37 @@ namespace Project1_Horvat_Francis
             // 
             // Letter_5
             // 
-            this.Letter_5.Location = new System.Drawing.Point(221, 21);
-            this.Letter_5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Letter_5.Location = new System.Drawing.Point(147, 14);
             this.Letter_5.Name = "Letter_5";
-            this.Letter_5.Size = new System.Drawing.Size(40, 26);
+            this.Letter_5.Size = new System.Drawing.Size(28, 20);
             this.Letter_5.TabIndex = 17;
             // 
             // Letter_4
             // 
-            this.Letter_4.Location = new System.Drawing.Point(170, 21);
-            this.Letter_4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Letter_4.Location = new System.Drawing.Point(113, 14);
             this.Letter_4.Name = "Letter_4";
-            this.Letter_4.Size = new System.Drawing.Size(40, 26);
+            this.Letter_4.Size = new System.Drawing.Size(28, 20);
             this.Letter_4.TabIndex = 16;
             // 
             // Letter_3
             // 
-            this.Letter_3.Location = new System.Drawing.Point(119, 21);
-            this.Letter_3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Letter_3.Location = new System.Drawing.Point(79, 14);
             this.Letter_3.Name = "Letter_3";
-            this.Letter_3.Size = new System.Drawing.Size(40, 26);
+            this.Letter_3.Size = new System.Drawing.Size(28, 20);
             this.Letter_3.TabIndex = 15;
             // 
             // Letter_2
             // 
-            this.Letter_2.Location = new System.Drawing.Point(68, 21);
-            this.Letter_2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Letter_2.Location = new System.Drawing.Point(45, 14);
             this.Letter_2.Name = "Letter_2";
-            this.Letter_2.Size = new System.Drawing.Size(40, 26);
+            this.Letter_2.Size = new System.Drawing.Size(28, 20);
             this.Letter_2.TabIndex = 14;
             // 
             // Letter_1
             // 
-            this.Letter_1.Location = new System.Drawing.Point(17, 21);
-            this.Letter_1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Letter_1.Location = new System.Drawing.Point(11, 14);
             this.Letter_1.Name = "Letter_1";
-            this.Letter_1.Size = new System.Drawing.Size(40, 26);
+            this.Letter_1.Size = new System.Drawing.Size(28, 20);
             this.Letter_1.TabIndex = 13;
             // 
             // timer1
@@ -154,19 +158,17 @@ namespace Project1_Horvat_Francis
             // gameWordList
             // 
             this.gameWordList.FormattingEnabled = true;
-            this.gameWordList.ItemHeight = 20;
-            this.gameWordList.Location = new System.Drawing.Point(12, 105);
+            this.gameWordList.Location = new System.Drawing.Point(8, 68);
+            this.gameWordList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gameWordList.Name = "gameWordList";
-            this.gameWordList.Size = new System.Drawing.Size(444, 324);
+            this.gameWordList.Size = new System.Drawing.Size(297, 212);
             this.gameWordList.TabIndex = 25;
-
             // 
             // endButton
             // 
-            this.endButton.Location = new System.Drawing.Point(377, 11);
-            this.endButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.endButton.Location = new System.Drawing.Point(251, 7);
             this.endButton.Name = "endButton";
-            this.endButton.Size = new System.Drawing.Size(58, 46);
+            this.endButton.Size = new System.Drawing.Size(39, 30);
             this.endButton.TabIndex = 24;
             this.endButton.Text = "End";
             this.endButton.UseVisualStyleBackColor = true;
@@ -174,9 +176,9 @@ namespace Project1_Horvat_Francis
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 465);
+            this.ClientSize = new System.Drawing.Size(327, 302);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox3);
@@ -190,10 +192,12 @@ namespace Project1_Horvat_Francis
             this.Controls.Add(this.Letter_1);
             this.Controls.Add(this.gameWordList);
             this.Controls.Add(this.endButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
            
