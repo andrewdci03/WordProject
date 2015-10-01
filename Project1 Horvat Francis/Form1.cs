@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,13 +28,33 @@ namespace Project1_Horvat_Francis
             wordList = new List<string>();
             this.wordList = List;
             InitializeComponent();
+            this.gameWordList.DataSource = wordList;
+        }
+
+        public void refreshList()
+        {
+
+            this.gameWordList.DataSource = null;
+
+
+            this.gameWordList.DataSource = wordList;
         }
 
         private void startButton_Click(object sender, EventArgs e)
         {
+            if (this.startButton.Text == "GO!") { 
             getLetters();
             timer1.Enabled = true;
-            this.gameWordList.DataSource = wordList;
+            this.startButton.Text = "Stop!";
+            }
+
+            else
+            {
+                startButton.Text = "GO!";
+                timer1.Enabled = false;
+            }
+
+            
         }
 
         private void endButton_Click(object sender, EventArgs e)
@@ -51,6 +72,9 @@ namespace Project1_Horvat_Francis
             if (!checkBox1.Checked)
             {
                 Letter_1.Text = Char.ToString(GetLetter());
+            } else
+            {
+                filterList( Letter_1.Text[0] , 0);
             }
             if (!checkBox2.Checked)
             {
@@ -76,7 +100,33 @@ namespace Project1_Horvat_Francis
             // ... Between 'a' and 'z' inclusize.
             int num = _random.Next(0, 26); // Zero to 25
             char let = (char)('a' + num);
-            return let;
+            return Char.ToUpper(let);
+        }
+
+
+        // Filters our word list based on the character position and the value of the char
+        public void filterList(char letter, int position)
+        {
+            for (int i = 0; i < wordList.Count ; i++)
+            {
+                String word = wordList.ElementAt(i);
+
+                char a = word[position];
+
+                if (letter == a)
+                {
+                    continue;
+                }
+
+                else
+                {
+                    this.wordList.Remove(word);
+                    Debug.Print("removed " + word);
+                }
+ 
+            }
+
+            refreshList();
         }
     }
 }

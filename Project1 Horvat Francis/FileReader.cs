@@ -25,7 +25,7 @@ namespace Project1_Horvat_Francis
             {
                 while (!Reader.EndOfStream)
                 {
-                    wordList.Add(Reader.ReadLine());
+                    wordList.Add(Reader.ReadLine().ToUpper());
                     Debug.WriteLine(Reader.ReadLine() + " has been added to the list");
                 }
                     
