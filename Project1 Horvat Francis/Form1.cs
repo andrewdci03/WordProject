@@ -14,7 +14,7 @@ namespace Project1_Horvat_Francis
     public partial class Form1 : Form
     {
 
-        private List<string> wordList;
+        private List<string> curList, wordList;
 
         static Random _random = new Random();
 
@@ -25,20 +25,17 @@ namespace Project1_Horvat_Francis
 
         public Form1(List<string> List)
         {
-            wordList = new List<string>();
-            this.wordList = List;
             InitializeComponent();
-            this.gameWordList.DataSource = wordList;
+            wordList = List;
+            curList = new List<string>();
+
+            for (int i = 0; i < List.Count; i++)
+            {
+                gameWordList.Items.Add(List.ElementAt(i));
+            }
         }
 
-        public void refreshList()
-        {
 
-            this.gameWordList.DataSource = null;
-
-
-            this.gameWordList.DataSource = wordList;
-        }
 
         private void startButton_Click(object sender, EventArgs e)
         {
@@ -67,15 +64,16 @@ namespace Project1_Horvat_Francis
             getLetters();
         }
 
+
+
+        // This function will generate random characters in our text boxes as long as they are not clicked.
         private void getLetters()
         {
+
             if (!checkBox1.Checked)
             {
                 Letter_1.Text = Char.ToString(GetLetter());
-            } else
-            {
-                filterList( Letter_1.Text[0] , 0);
-            }
+            } 
             if (!checkBox2.Checked)
             {
                 Letter_2.Text = Char.ToString(GetLetter());
@@ -103,30 +101,120 @@ namespace Project1_Horvat_Francis
             return Char.ToUpper(let);
         }
 
-
-        // Filters our word list based on the character position and the value of the char
-        public void filterList(char letter, int position)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < wordList.Count ; i++)
-            {
-                String word = wordList.ElementAt(i);
+            searchWords(1);
+        }
 
-                char a = word[position];
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            searchWords(2);
+        }
 
-                if (letter == a)
-                {
-                    continue;
-                }
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            searchWords(3);
+        }
 
-                else
-                {
-                    this.wordList.Remove(word);
-                    Debug.Print("removed " + word);
-                }
- 
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            searchWords(4);
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            searchWords(5);
+        }
+
+        public void searchWords(int position)
+        {
+            char one, two, three, four, five;
+
+            one = Letter_1.Text[0];
+            two = Letter_2.Text[0];
+            three = Letter_3.Text[0];
+            four = Letter_4.Text[0];
+            five = Letter_5.Text[0];
+
+            switch (position) {
+                case 1:
+                    
+                    for (int i =  gameWordList.Items.Count - 1; i > -1; i-- )
+                    {
+                        if ( gameWordList.Items[i].ToString()[0] == one )
+                        {
+                            Letter_1.BackColor = System.Drawing.Color.Green;
+                        }
+                        else
+                        {
+                            gameWordList.Items.Remove(gameWordList.Items[i].ToString());
+                        }
+                    }
+                    break;
+
+                case 2:
+
+                    for (int i = gameWordList.Items.Count - 1; i > -1; i--)
+                    {
+                        if (gameWordList.Items[i].ToString()[1] == two)
+                        {
+                            Letter_2.BackColor = System.Drawing.Color.Green;
+                        }
+                        else
+                        {
+                            gameWordList.Items.Remove(gameWordList.Items[i].ToString());
+                        }
+                    }
+                    break;
+
+                case 3:
+
+                    for (int i = gameWordList.Items.Count - 1; i > -1; i--)
+                    {
+                        if (gameWordList.Items[i].ToString()[2] == three)
+                        {
+                            Letter_3.BackColor = System.Drawing.Color.Green;
+                        }
+                        else
+                        {
+                            gameWordList.Items.Remove(gameWordList.Items[i].ToString());
+                        }
+                    }
+                    break;
+
+                case 4:
+
+                    for (int i = gameWordList.Items.Count - 1; i > -1; i--)
+                    {
+                        if (gameWordList.Items[i].ToString()[3] == four)
+                        {
+                            Letter_4.BackColor = System.Drawing.Color.Green;
+                        }
+                        else
+                        {
+                            gameWordList.Items.Remove(gameWordList.Items[i].ToString());
+                        }
+                    }
+                    break;
+
+                case 5:
+
+                    for (int i = gameWordList.Items.Count - 1; i > -1; i--)
+                    {
+                        if (gameWordList.Items[i].ToString()[4] == five)
+                        {
+                            Letter_5.BackColor = System.Drawing.Color.Green;
+                        }
+                        else
+                        {
+                            gameWordList.Items.Remove(gameWordList.Items[i].ToString());
+                        }
+                    }
+                    break;
+
             }
 
-            refreshList();
         }
+       
     }
 }
