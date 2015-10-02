@@ -46,13 +46,14 @@ namespace Project1_Horvat_Francis
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gameWordList = new System.Windows.Forms.ListBox();
             this.endButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
             this.checkBox5.Location = new System.Drawing.Point(153, 35);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(15, 14);
             this.checkBox5.TabIndex = 23;
@@ -63,7 +64,7 @@ namespace Project1_Horvat_Francis
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Location = new System.Drawing.Point(119, 35);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(15, 14);
             this.checkBox4.TabIndex = 22;
@@ -74,7 +75,7 @@ namespace Project1_Horvat_Francis
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(85, 35);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(15, 14);
             this.checkBox3.TabIndex = 21;
@@ -85,7 +86,7 @@ namespace Project1_Horvat_Francis
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(51, 35);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
             this.checkBox2.TabIndex = 20;
@@ -98,7 +99,7 @@ namespace Project1_Horvat_Francis
             this.checkBox1.BackColor = System.Drawing.SystemColors.Control;
             this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.checkBox1.Location = new System.Drawing.Point(17, 35);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 19;
@@ -159,7 +160,7 @@ namespace Project1_Horvat_Francis
             // 
             this.gameWordList.FormattingEnabled = true;
             this.gameWordList.Location = new System.Drawing.Point(8, 68);
-            this.gameWordList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameWordList.Margin = new System.Windows.Forms.Padding(2);
             this.gameWordList.Name = "gameWordList";
             this.gameWordList.Size = new System.Drawing.Size(297, 212);
             this.gameWordList.TabIndex = 25;
@@ -174,11 +175,22 @@ namespace Project1_Horvat_Francis
             this.endButton.UseVisualStyleBackColor = true;
             this.endButton.Click += new System.EventHandler(this.endButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(206, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Reset Game!";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 302);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox3);
@@ -192,7 +204,7 @@ namespace Project1_Horvat_Francis
             this.Controls.Add(this.Letter_1);
             this.Controls.Add(this.gameWordList);
             this.Controls.Add(this.endButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -218,6 +230,7 @@ namespace Project1_Horvat_Francis
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ListBox gameWordList;
         private System.Windows.Forms.Button endButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 
