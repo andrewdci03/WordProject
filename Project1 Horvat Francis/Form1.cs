@@ -137,6 +137,18 @@ namespace Project1_Horvat_Francis
                 Letter_4.Text = Char.ToString(word[3]);
                 Letter_5.Text = Char.ToString(word[4]);
 
+                Letter_1.BackColor = Color.Green;
+                Letter_2.BackColor = Color.Green;
+                Letter_3.BackColor = Color.Green;
+                Letter_4.BackColor = Color.Green;
+                Letter_5.BackColor = Color.Green;
+
+                checkBox1.Checked = true;
+                checkBox2.Checked = true;
+                checkBox3.Checked = true;
+                checkBox4.Checked = true;
+                checkBox5.Checked = true;
+
             } else
             {
                 getLetters();
@@ -186,26 +198,31 @@ namespace Project1_Horvat_Francis
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(1);
+            checkBoxes();
             checkBox1.Enabled = false;
         }
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(2);
+            checkBoxes();
             checkBox2.Enabled = false;
         }
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(3);
+            checkBoxes();
             checkBox3.Enabled = false;
         }
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(4);
+            checkBoxes();
             checkBox4.Enabled = false;
         }
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(5);
+            checkBoxes();
             checkBox5.Enabled = false;
         }
 
@@ -419,13 +436,20 @@ namespace Project1_Horvat_Francis
                             if (reloadList.Count > 0)
                                 gameWordList.Items.Add(reloadList.ElementAt(j));
                         }
-
                     }
                     break;
-
             }
-
         }
-       
+        
+        //Checks to see if the user selected a word and displays a message
+        public void checkBoxes()
+        {
+            if (Letter_1.BackColor == Color.Green && Letter_2.BackColor == Color.Green &&
+                Letter_3.BackColor == Color.Green && Letter_4.BackColor == Color.Green &&
+                Letter_5.BackColor == Color.Green)
+            {
+                MessageBox.Show("Congratulations you won!");               
+            }
+        }       
     }
 }
