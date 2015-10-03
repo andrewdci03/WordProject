@@ -14,9 +14,11 @@ namespace Project1_Horvat_Francis
     public partial class Form1 : Form
     {
 
+        
         private List<string> curList, wordList;
 
         static Random _random = new Random();
+        private int boxesClicked = 0;
 
         public Form1()
         {
@@ -82,6 +84,7 @@ namespace Project1_Horvat_Francis
             resetAllComponents();
         }
 
+        // This will reset the game
         private void resetAllComponents()
         {
             // Set the button to "Go"
@@ -92,6 +95,8 @@ namespace Project1_Horvat_Francis
             Letter_3.Text = "@";
             Letter_4.Text = "@";
             Letter_5.Text = "@";
+
+            boxesClicked = 0;
 
             // clear all button colors
             Letter_1.BackColor = Color.Empty;
@@ -125,8 +130,11 @@ namespace Project1_Horvat_Francis
 
         }
 
+        // Timer for random letter generation.
+
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             // If there is only one word left in the list then fill it;
             if (gameWordList.Items.Count == 1)
             {
@@ -149,8 +157,32 @@ namespace Project1_Horvat_Francis
                 checkBox4.Checked = true;
                 checkBox5.Checked = true;
 
-            } else
+            } 
+            else if (boxesClicked > 4)
             {
+                string word = gameWordList.Items[0].ToString();
+                Letter_1.Text = Char.ToString(word[0]);
+                Letter_2.Text = Char.ToString(word[1]);
+                Letter_3.Text = Char.ToString(word[2]);
+                Letter_4.Text = Char.ToString(word[3]);
+                Letter_5.Text = Char.ToString(word[4]);
+
+                Letter_1.BackColor = Color.Green;
+                Letter_2.BackColor = Color.Green;
+                Letter_3.BackColor = Color.Green;
+                Letter_4.BackColor = Color.Green;
+                Letter_5.BackColor = Color.Green;
+
+                checkBox1.Checked = true;
+                checkBox2.Checked = true;
+                checkBox3.Checked = true;
+                checkBox4.Checked = true;
+                checkBox5.Checked = true;
+            }
+
+            else
+            {
+                
                 getLetters();
             }
 
@@ -184,6 +216,7 @@ namespace Project1_Horvat_Francis
             }
         }
 
+        // This generates a random letter
         public static char GetLetter()
         {
             // This method returns a random lowercase letter.
@@ -200,37 +233,46 @@ namespace Project1_Horvat_Francis
             searchWords(1);
             checkBoxes();
             checkBox1.Enabled = false;
+            boxesClicked++;
         }
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(2);
             checkBoxes();
             checkBox2.Enabled = false;
+            boxesClicked++;
         }
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(3);
             checkBoxes();
             checkBox3.Enabled = false;
+            boxesClicked++;
         }
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(4);
             checkBoxes();
             checkBox4.Enabled = false;
+            boxesClicked++;
         }
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
             searchWords(5);
             checkBoxes();
             checkBox5.Enabled = false;
+            boxesClicked++;
         }
 
+
+        // Button click to reset the game.
         private void button1_Click(object sender, EventArgs e)
         {
             resetAllComponents();
         }
 
+
+        //This is where all the magic happens. This function will search the list of words based on the position being checked
         public void searchWords(int position)
         {
             char one, two, three, four, five;
