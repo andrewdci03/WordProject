@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// File reader class to read in the input from a file.
 namespace Project1_Horvat_Francis
 {
     class FileReader
